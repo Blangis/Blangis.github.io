@@ -146,10 +146,64 @@ nav ul li:hover {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.hotsale img {
+.dadbanner img {
   width: 100%;
   height: auto;
   display: block;
 }
 
+.dad-promo{
+    display: flex;
+    flex-direction: column;
+}
 
+.dad-encabezado{
+    display: flex;
+    justify-content:space-around;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.dad-encabezado h2{
+    font-weight: 800;
+}
+
+.dad-encabezado button{
+    border:none;
+    background-color: transparent;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color:black;
+    cursor:pointer;
+}
+
+.custom-slide {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.custom-slide:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.carousel-item {
+  transition: transform 0.6s ease;
+}
+
+.parent {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: px;
+grid-row-gap: 9px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 5; }
+.div2 { grid-area: 2 / 1 / 4 / 3; }
+.div3 { grid-area: 4 / 1 / 6 / 3; }
+.div4 { grid-area: 2 / 3 / 4 / 5; }
+.div5 { grid-area: 4 / 3 / 6 / 5; }
