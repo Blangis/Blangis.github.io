@@ -260,3 +260,29 @@ nav ul li:hover {
 
 
 }
+
+footer{
+  display:flex;
+  padding:8px;
+  justify-content: space-around;
+}
+
+footer h5{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+footer ul{
+  padding-left: 0;
+  text-align: start;
+
+}
+
+footer ul li:hover {
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.iconos-foot{
+  margin: 12px;
+}
