@@ -38,6 +38,36 @@ buttonDeluxe.addEventListener("click", function(){
 
 })
 
+// document.querySelector('#modificame').style.color="purple";
+
+
+let modificar = document.querySelector('#modificame');
+console.log(modificar);
+
+let keyDownEvent = document.querySelector("#texto-tecla-presionada");
+keyDownEvent.addEventListener("keydown",logKey);
+
+function logKey(tecla){
+    if(tecla.code == "KeyA" || tecla.code == "KeyS" || tecla.code == "KeyE"){ 
+        modificar.textContent = `Esa es la letra con código: ${tecla.code}`
+        modificar.style.color = "purple"
+    } else{
+        modificar.textContent = "Vas bien :)"
+        modificar.style.color="blue";
+    }
+}
+
+// EVENTO SUBMIT
+let formulario = document.getElementById('loginForm');
+
+formulario.addEventListener("submit", () =>{
+    let nombre = document.getElementById('nombre').value;
+    let correo = document.getElementById('correo').value;
+    alert("Formulario de " + nombre + " enviadoooo");
+    alert("Tu correo es:" + correo)
+})
+
+
 /*
 function miFuncion(){
     Funcion equis
