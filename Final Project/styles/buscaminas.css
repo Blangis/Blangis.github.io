@@ -1,57 +1,76 @@
 /*Declaro variables css globales*/
-:root{
-    --num-columnas:10;
-
+:root {
+  --num-columnas: 40;
+  --num-filas: 20;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(40, 129, 117);
 }
 
-body{
-    display:flex;
-    flex-direction: column;
-    width:100vw;
-    height:100vh;
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    90deg,
+    rgba(250, 165, 165, 1) 0%,
+    rgba(176, 235, 197, 1) 62%,
+    rgba(219, 209, 116, 1) 100%
+  );
 }
 
-.container{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 2%;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2%;
 }
 
-.score{
-    width:80%;
-    height:15%;
-    background-color: rgba(241, 7, 7, 0.418);
-    color:white;
+.score {
+  width: 80%;
+  height: 15%;
+  background-color: rgba(241, 7, 7, 0.418);
+  color: white;
+  align-items: center;
+  text-align: center;
 }
 
 .cells {
-    display: grid;
-    grid-template-columns: repeat(40, 1fr);
-    grid-template-rows: repeat(20, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width:80%;
-    background-color: rgb(182, 171, 171);
-    text-align: center;
-    line-height: 32px;
+  display: grid;
+  grid-template-columns: repeat(var(--num-columnas), 1fr);
+  grid-template-rows: repeat(var(--num-filas), 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 80%;
+  background-color: rgb(182, 171, 171);
+  text-align: center;
+  line-height: 32px;
 }
 
-.cell{
-    border:1px solid black;
-    aspect-ratio: 1;
-    text-align: center;
-    border-left: 2px solid #D3D3D3;
-    border-top: 2px solid #D3D3D3;
-    border-right: 2px solid #A9A9A9;
-    border-bottom: 2px solid #A9A9A9;
+.cell {
+  border: 1px solid black;
+  aspect-ratio: 1;
+  text-align: center;
+  border-left: 2px solid #d3d3d3;
+  border-top: 2px solid #d3d3d3;
+  border-right: 2px solid #a9a9a9;
+  border-bottom: 2px solid #a9a9a9;
+  cursor: pointer;
 }
 
-footer{
-    background-color: brown;
+.cell.bomba {
+  background-color: #ec1d1d;
+}
+
+.cell.revelada {
+  background-color: aquamarine;
+}
+
+footer {
+  background-color: rgb(211, 171, 171);
+  text-align: center;
 }
